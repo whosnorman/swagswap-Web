@@ -1,8 +1,12 @@
 <html>
 <head>
 	<title>Swag Swap</title>
-<link href="main.css" rel="stylesheet">
-<link href="mainfallback.css" rel="stylesheet">
+	<link href="main.css" rel="stylesheet">
+	<link href="mainfallback.css" rel="stylesheet">
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+
   <link href='http://fonts.googleapis.com/css?family=Nobile:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -10,6 +14,9 @@
 </head>
 
 <body>
+	<div id="fb-root"></div>
+	<script type="text/javascript" src="login.js"></script>
+
 	<div class="topBar">
 
 		<div class="clock">
@@ -21,20 +28,25 @@
 	    </div>
 	</div>
 
-	<div class="welcometo">
+
+	
+
+	<div class="welcometo" id="welcome">
 	      <span class="one">Welcome to</span>
 	    </div>
 
 	<div class="swagswap">
-	      <span class="one">Swag</span><span class="two">Swap</span>
+	      <span class="one" id="first">Swag</span><span class="two" id="second">Swap</span>
 	    </div>
 
 	<div class="description">
 	      <span class="one">Where hackathon swag is swapped... fo' free!</span>
 	    </div>
 
-<div class="frontsignin">
-<span class="one"><a href="">Sign in with Facebook now</a></span>
+
+	<div class="frontsignin" id="fb">
+	      <span class="one"><a href="">Sign in with Facebook</a></span>
+	    </div>
 
     </div>
 
