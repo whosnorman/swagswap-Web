@@ -5,11 +5,10 @@
 
     Parse.FacebookUtils.init({ // this line replaces FB.init({
       appId      : '742900129109809', // Facebook App ID
-      channelUrl : 'http://swagswap.me/main.html',
       status     : true, // check Facebook Login status
       cookie     : true, // enable cookies to allow Parse to access the session
       xfbml      : true,
-      version    : 'v2.1'
+      version    : 'v1.0'
     });
 
 
@@ -27,12 +26,17 @@
           } else {
             alert("User logged in through Facebook!");
           }   
+
+          document.getElementById('welcome').innerHTML = "Let's Get Some";
+          document.getElementById('first').innerHTML = "Swaggathon";
+          document.getElementById('second').innerHTML = "Swagger";
+          
         },   
         error: function(user, error) {
           alert("User cancelled the Facebook login or did not fully authorize.");  
         } 
       });
-      
+
     });
 
     /*var fbBtn = document.getElementById('fb');
@@ -72,6 +76,6 @@
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) {return;}
     js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    js.src = "https://connect.facebook.net/en_US/all.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
