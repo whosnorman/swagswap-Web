@@ -17,7 +17,8 @@
     var fbBtn = document.getElementById('fb');
     fbBtn.addEventListener("click", function(){
 
-        Parse.FacebookUtils.logIn("email", {
+
+        Parse.FacebookUtils.logIn(null, {
         success: function(user) {
           if (!user.existed()) {
             console.log('existed');
@@ -26,7 +27,7 @@
             console.log('logged in');
           }
 
-          console.log(user);
+          //console.log(user);
           // Handle successful login
           /*document.getElementById('welcome').innerHTML = "Let's Get Some";
           document.getElementById('first').innerHTML = "Swaggathon";
