@@ -18,7 +18,7 @@
     fbBtn.addEventListener("click", function(){
 
 
-        Parse.FacebookUtils.logIn(null, {
+      Parse.FacebookUtils.logIn("email", {
         success: function(user) {
           if (!user.existed()) {
             console.log('existed');
