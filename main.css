@@ -13,7 +13,7 @@ body {
 	background-color: rgba(77, 77, 77, 0.95);
 	font-family: 'Muli', sans-serif;
 	font-weight: 700;
-	font-size: 36px;
+	font-size: 1.7vw;
 	color: #fff;
 	height: 100px;
 	width: 100%;
@@ -21,10 +21,9 @@ body {
 	z-index: 1;
 }
 
-
 .brand {
 	position: relative;
-	margin: 0.8em;
+	margin: 28px;
 }
 
 
