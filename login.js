@@ -8,7 +8,7 @@
       status     : true, // check Facebook Login status
       cookie     : true, // enable cookies to allow Parse to access the session
       xfbml      : true,
-      //version    : 'v2.1'
+      version    : 'v2.1'
     });
 
 
