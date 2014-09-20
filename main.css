@@ -42,7 +42,7 @@ body {
 }
 
 .username:hover {
-	color:#F5680A;
+	color:#C9645E;
 	cursor: pointer;
 }
 
@@ -52,7 +52,7 @@ body {
 
 .two {
 	font-weight: 900;
-	color: #0AE24A;
+	color: #C9645E;
 }
 
 .btn {
@@ -62,8 +62,8 @@ body {
 }
 
 .btn:hover{
-	border: 2px solid #F5680A;
-	color: #F5680A;
+	border: 2px solid #C9645E;
+	color: #C9645E;
 	cursor: pointer;
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 .hackathonCont ul li:hover {
-	border: 2px solid #fff;
+	border: 2px solid #C9645E;
 	color: rgba(255, 255, 255, 0.85);
 	background-color: rgba(77, 77, 77, 0.4);;
 	cursor: pointer;
@@ -122,7 +122,7 @@ body {
 }
 
 .categories ul li:hover {
-	border-bottom: 3px solid #fff;
+	border-bottom: 3px solid #C9645E;
 	margin-bottom: 17px;
 }
 
