@@ -13,7 +13,7 @@ body {
 	background-color: rgba(77, 77, 77, 0.95);
 	font-family: 'Muli', sans-serif;
 	font-weight: 700;
-	font-size: 1.7vw;
+	font-size: 1.5vw;
 	color: #fff;
 	height: 100px;
 	width: 100%;
@@ -24,6 +24,7 @@ body {
 .brand {
 	position: relative;
 	margin: 28px;
+	font-size: 1.7vw
 }
 
 
@@ -69,12 +70,10 @@ body {
 
 .pageCont {
 	position: relative;
-	top: -2.5em;
+	top: 0.6em;
 	width: 97%;
-	height: 80%;
+	height: 20px;
 	border: 0px solid #fff;
-	margin: 1.5%;
-
 	font-family: 'Muli', sans-serif;
 	font-weight: 700;
 	font-size: 36px;
@@ -83,23 +82,21 @@ body {
 
 .hackathonCont {
 	position: relative;
-	width: 97%;
+	width: 50%;
 	max-height: 15%;
 }
 
-.hackathonCont ul {
+.hackathonCont li {
 	text-align: center;
-	width: 85%;
+	width: 30%;
 }
 .hackathonCont ul li {
 	border: 2px solid #fff;
 	border-radius: 4px;
 	padding: 5px;
-	margin-left: 3%;
-	margin-right: 3%;
+	margin: 0.5em 0.5em 0.5em;
 	background-color: rgba(77, 77, 77, 0.7);
 	list-style-type: none;
-	display: inline-block;
 }
 
 .hackathonCont ul li:hover {
@@ -111,9 +108,12 @@ body {
 
 .categories {
 	width: 12%;
-	height: 95%;
+	height: 10em;
 	border: 1px solid #fff;
 	padding: 1em;
+	margin-left: 0.5em;
+	text-align: left;
+
 }
 
 .categories ul li {
@@ -131,14 +131,15 @@ body {
 	border: 1px solid #fff;
 	position: relative;
 	float: right;
-	margin-right: 4em;
+	margin-right: 4.5%;
+	margin-left: 4.5%;
 }
 
 .item {
 	width: 200px;
 	height: 200px;
 	background-color: rgba(255, 255, 255, 0.2);
-	margin: 2em;
+	margin: 0.45em 0.45em 0.45em 0.45em;
 	float: right;
 	position: relative;
 }
@@ -150,7 +151,10 @@ body {
 
 .profile {
 	width: 15%;
+	height: 20em;
 	border: 1px solid #fff;
 	position: relative;
 	float: right;
+	margin-right: 0.5em;
+	text-align: center;
 }
