@@ -27,6 +27,17 @@ body {
 	margin: 0.8em;
 }
 
+.clock {
+	position: relative;
+    width: 1000px;
+    height: 50px;
+    font-size: 36px;
+    top: 50%;
+    left: 50%;
+    margin-left: 12em;
+    margin-top: -2.3em; 
+}
+
 .welcometo {
 	position: relative;
     width: 1500px;
@@ -35,7 +46,7 @@ body {
     top: 50%;
     left: 50%;
     margin-left: -2.4em;
-    margin-top: 0.1em; 
+    margin-top: 0.3em; 
 }
 
 .swagswap {
@@ -102,7 +113,7 @@ body {
 
 .pageCont {
 	position: relative;
-	top: 3em;
+	top: -2.5em;
 	width: 97%;
 	height: 80%;
 	border: 0px solid #fff;
