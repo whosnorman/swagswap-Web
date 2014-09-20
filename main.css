@@ -1,7 +1,7 @@
 
 
 body {
-	background-image: url('bg3.jpg');
+	background-color: rgba(77, 77, 77, 0.95);
 	background-repeat: none;
 	background-size: cover;
 	margin: 0;
@@ -25,6 +25,39 @@ body {
 .brand {
 	position: relative;
 	margin: 0.8em;
+}
+
+.welcometo {
+	position: relative;
+    width: 1500px;
+    height: 50px;
+    font-size: 150px;
+    top: 50%;
+    left: 50%;
+    margin-left: -2.4em;
+    margin-top: 0.1em; 
+}
+
+.swagswap {
+	position: relative;
+    width: 750px;
+    height: 50px;
+    font-size: 200px;
+    top: 50%;
+    left: 50%;
+    margin-left: -2.5em;
+    margin-top: 0.4em; 
+}
+
+.description {
+	position: relative;
+    width: 1000px;
+    height: 50px;
+    font-size: 36px;
+    top: 50%;
+    left: 50%;
+    margin-left: -9.4em;
+    margin-top: 5.5em; 
 }
 
 .logOut {
@@ -89,14 +122,14 @@ body {
 
 .hackathonCont ul {
 	text-align: center;
-	width: 100%;
+	width: 85%;
 }
 .hackathonCont ul li {
 	border: 2px solid #fff;
 	border-radius: 4px;
 	padding: 5px;
-	margin-left: 7%;
-	margin-right: 7%;
+	margin-left: 3%;
+	margin-right: 3%;
 	background-color: rgba(77, 77, 77, 0.7);
 	list-style-type: none;
 	display: inline-block;
