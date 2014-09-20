@@ -5,6 +5,7 @@
 
     Parse.FacebookUtils.init({ // this line replaces FB.init({
       appId      : '742900129109809', // Facebook App ID
+      channelUrl : 'http://swagswap.me/main.html',
       status     : true, // check Facebook Login status
       cookie     : true, // enable cookies to allow Parse to access the session
       xfbml      : true,
@@ -29,13 +30,14 @@
 
           //console.log(user);
           // Handle successful login
-          
+
+  /*          
           document.getElementById('welcome').innerHTML = "Let's Get Some";
           document.getElementById('first').innerHTML = "Swaggathon";
           document.getElementById('second').innerHTML = "Swagger";
 
 
-          window.location.replace("http://swagswap.me/main.html"); 
+          window.location.replace("http://swagswap.me/main.html"); */
         },
         error: function(user, error) {
           console.log(error);
