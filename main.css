@@ -29,24 +29,24 @@ body {
 
 .clock {
 	position: relative;
-    width: 1000px;
+    width: 460px;
     height: 50px;
-    font-size: 36px;
+    font-size: 30px;
     top: 50%;
     left: 50%;
-    margin-left: 12em;
-    margin-top: -2.3em; 
+    margin-left: 16.5em;
+    margin-top: -4.1em; 
 }
 
 .welcometo {
 	position: relative;
-    width: 1500px;
+    width: 900px;
     height: 50px;
     font-size: 150px;
     top: 50%;
     left: 50%;
     margin-left: -2.4em;
-    margin-top: 0.3em; 
+    margin-top: 0.4em; 
 }
 
 .swagswap {
@@ -62,13 +62,24 @@ body {
 
 .description {
 	position: relative;
-    width: 1000px;
+    width: 800px;
     height: 50px;
     font-size: 36px;
     top: 50%;
     left: 50%;
     margin-left: -9.4em;
     margin-top: 5.5em; 
+}
+
+.frontsignin {
+	position: relative;
+    width: 500px;
+    height: 50px;
+    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    margin-left: -5em;
+    margin-top: 10em; 
 }
 
 .logOut {
