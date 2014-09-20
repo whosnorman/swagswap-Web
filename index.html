@@ -2,6 +2,7 @@
 <head>
 	<title>Swag Swap</title>
 <link href="main.css" rel="stylesheet">
+<link href="mainfallback.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Nobile:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -9,52 +10,55 @@
 </head>
 
 <body>
-<div class="topBar">
+	<div class="topBar">
 
-   <div class="brand">
-      <span class="one">Swag</span><span class="two">Swap</span>
-    </div>
+		<div class="clock">
+			<div id="clockbox"></div>
+		</div>
 
-<div class="clock">
-<script type="text/javascript">
-tday  =new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+	   <div class="brand">
+	      <span class="one">Swag</span><span class="two">Swap</span>
+	    </div>
+	</div>
 
-function GetClock(){
-d = new Date();
-nday   = d.getDay();
-nmonth = d.getMonth();
-ndate  = d.getDate();
-nyear = d.getYear();
-if(nyear<1000) nyear=nyear+1900;
+	
+
+	<div class="welcometo">
+	      <span class="one">Welcome to</span>
+	    </div>
+
+	<div class="swagswap">
+	      <span class="one">Swag</span><span class="two">Swap</span>
+	    </div>
+
+	<div class="description">
+	      <span class="one">Where hackathon swag is swapped... fo' free!</span>
+	    </div>
+
+	<div class="frontsignin">
+	      <span class="one"><a href="">Sign in with Facebook now</a></div></span>
+	    </div>
 
 
-document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
-setTimeout("GetClock()", 1000);
-}
-window.onload=GetClock;
-</script>
-<div id="clockbox"></div>
-</div>
 
-<div class="welcometo">
-      <span class="one">Welcome to</span>
-    </div>
+	<script type="text/javascript">
+		tday  =new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+		tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
 
-<div class="swagswap">
-      <span class="one">Swag</span><span class="two">Swap</span>
-    </div>
+		function GetClock(){
+		d = new Date();
+		nday   = d.getDay();
+		nmonth = d.getMonth();
+		ndate  = d.getDate();
+		nyear = d.getYear();
+		if(nyear<1000) nyear=nyear+1900;
 
-<div class="description">
-      <span class="one">Where hackathon swag is swapped... fo' free!</span>
-    </div>
 
-<div class="frontsignin">
-      <span class="one">Sign in with Facebook now</span>
-    </div>
-
-	</div> <!-- end top bar -->
-
+		document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
+		setTimeout("GetClock()", 1000);
+		}
+		window.onload=GetClock;
+	</script>
 
 </body>
 </html>

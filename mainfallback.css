@@ -1,13 +1,16 @@
+body {
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #fff;
+}
 
 .clock {
 	position: relative;
-    width: 460px;
-    height: 50px;
+    float: right;
     font-size: 30px;
-    top: 50%;
-    left: 50%;
-    margin-left: 16.5em;
-    margin-top: -4.1em; 
+    margin-top: 1em;
+    margin-right: 0.5em;
 }
 
 .welcometo {
