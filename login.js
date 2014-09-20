@@ -15,8 +15,21 @@
 
     console.log('sdk loaded');
 
-    var fbBtn = document.getElementById('fb');
-    fbBtn.addEventListener("click", function(){
+     Parse.FacebookUtils.logIn(null, {  
+      success: function(user) {
+        if (!user.existed()) {
+          alert("User signed up and logged in through Facebook!");
+        } else {
+          alert("User logged in through Facebook!");
+        }   
+      },   
+      error: function(user, error) {
+        alert("User cancelled the Facebook login or did not fully authorize.");  
+      } 
+    });
+
+    /*var fbBtn = document.getElementById('fb');
+    fbBtn.addEventListener("click", function(){ 
 
 
       Parse.FacebookUtils.logIn("email", {
@@ -28,23 +41,23 @@
             console.log('logged in');
           }
 
-          //console.log(user);
-          // Handle successful login
+          console.log(user);
+          Handle successful login
 
-  /*          
+            
           document.getElementById('welcome').innerHTML = "Let's Get Some";
           document.getElementById('first').innerHTML = "Swaggathon";
           document.getElementById('second').innerHTML = "Swagger";
 
 
-          window.location.replace("http://swagswap.me/main.html"); */
+          window.location.replace("http://swagswap.me/main.html"); 
         },
         error: function(user, error) {
           console.log(error);
-          // Handle errors and cancellation
+          Handle errors and cancellation
         }
       }); 
-    });
+    });*/
     
   };
  
