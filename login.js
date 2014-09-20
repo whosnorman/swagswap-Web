@@ -17,22 +17,22 @@
     var fbBtn = document.getElementById('fb');
 
 
-    fbBtn.on("click", function(){ 
+    $('#fb').click(function(){ 
 
-    
-
-    Parse.FacebookUtils.logIn(null, {
-      success: function(user) {
-        if (!user.existed()) {
-          alert("User signed up and logged in through Facebook!");
-        } else {
-          alert("User logged in through Facebook!");
+      Parse.FacebookUtils.logIn(null, {
+        success: function(user) {
+          if (!user.existed()) {
+            alert("User signed up and logged in through Facebook!");
+          } else {
+            alert("User logged in through Facebook!");
+          }
+        },
+        error: function(user, error) {
+          alert("User cancelled the Facebook login or did not fully authorize.");
         }
-      },
-      error: function(user, error) {
-        alert("User cancelled the Facebook login or did not fully authorize.");
-      }
-    });
+      });
+
+
 
     /*var fbBtn = document.getElementById('fb');
     fbBtn.addEventListener("click", function(){ 
@@ -64,8 +64,7 @@
         }
       }); 
     });*/
-    });
-  };
+  });
  
   (function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
