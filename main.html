@@ -18,7 +18,7 @@
 
 		<div class="logOut"><div class="btn" id="logOutBtn"> Log Out </div></div>
 		<div class="topRight">
-			Hello, <span class="username">username</span>
+			Hello, <span class="username" id="user">username</span>
 		</div>
 
 		<div class="brand">
@@ -65,6 +65,13 @@
 
 
 	</div>
+
+	<script>
+	var current = Parse.User.current();
+	console.log(current);
+	//document.getElementById('user').innerHTML = current.getName();
+
+	</script>
 
 </body>
 </html>
