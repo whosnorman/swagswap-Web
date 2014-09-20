@@ -17,26 +17,21 @@
     var fbBtn = document.getElementById('fb');
 
 
-    fbBtn.addEventListener("click", function(){ 
+    fbBtn.on("click", function(){ 
 
-      Parse.FacebookUtils.logIn(null, {  
-        success: function(user) {
-          if (!user.existed()) {
-            alert("User signed up and logged in through Facebook!");
-          } else {
-            alert("User logged in through Facebook!");
-          }   
+    
 
-          document.getElementById('welcome').innerHTML = "Let's Get Some";
-          document.getElementById('first').innerHTML = "Swaggathon";
-          document.getElementById('second').innerHTML = "Swagger";
-          
-        },   
-        error: function(user, error) {
-          alert("User cancelled the Facebook login or did not fully authorize.");  
-        } 
-      });
-
+    Parse.FacebookUtils.logIn(null, {
+      success: function(user) {
+        if (!user.existed()) {
+          alert("User signed up and logged in through Facebook!");
+        } else {
+          alert("User logged in through Facebook!");
+        }
+      },
+      error: function(user, error) {
+        alert("User cancelled the Facebook login or did not fully authorize.");
+      }
     });
 
     /*var fbBtn = document.getElementById('fb');
@@ -69,7 +64,7 @@
         }
       }); 
     });*/
-    
+    });
   };
  
   (function(d, s, id){
