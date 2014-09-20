@@ -21,10 +21,12 @@
         success: function(user) {
           console.log(user);
           // Handle successful login
-          document.getElementById('welcome').innerHTML = "Welcome";
+          document.getElementById('welcome').innerHTML = "Let's Get Some";
           document.getElementById('first').innerHTML = "Swaggathon";
-          document.getElementById('second').innerHTML = "Swaggers";
+          document.getElementById('second').innerHTML = "Swagger";
 
+
+          window.location.replace("http://swagswap.me/main.html");
         },
         error: function(user, error) {
           console.log(error);
