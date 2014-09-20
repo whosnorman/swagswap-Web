@@ -1,4 +1,6 @@
-swag-swap
+Swag Swap
 =========
 
-HackGT
+Made at HackGT.
+
+Trade, exchange, and barter swag on the Web and iOS.
