@@ -1,0 +1,156 @@
+
+
+body {
+	background-image: url('bg3.jpg');
+	background-repeat: none;
+	background-size: cover;
+	margin: 0;
+}
+
+.topBar {
+	top: 1em;
+	position: absolute;
+	background-color: rgba(77, 77, 77, 0.95);
+	font-family: 'Muli', sans-serif;
+	font-weight: 700;
+	font-size: 36px;
+	color: #fff;
+	height: 100px;
+	width: 100%;
+	margin: 0;
+	z-index: 1;
+}
+
+
+.brand {
+	position: relative;
+	margin: 0.8em;
+}
+
+.logOut {
+	float: right;
+	position: realtive;
+	margin: 0.6em 0.8em 0.6em 0.8em;
+	z-index: 2;
+}
+
+.topRight {
+	position: relative;
+	float: right;
+	margin: 0.8em;
+	z-index: 2;
+}
+
+.username:hover {
+	color:#F5680A;
+	cursor: pointer;
+}
+
+.one {
+	font-weight: 300;
+}
+
+.two {
+	font-weight: 900;
+	color: #0AE24A;
+}
+
+.btn {
+	border: 2px solid #fff;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+.btn:hover{
+	border: 2px solid #F5680A;
+	color: #F5680A;
+	cursor: pointer;
+}
+
+.pageCont {
+	position: relative;
+	top: 3em;
+	width: 97%;
+	height: 80%;
+	border: 0px solid #fff;
+	margin: 1.5%;
+
+	font-family: 'Muli', sans-serif;
+	font-weight: 700;
+	font-size: 36px;
+	color: #fff;
+}
+
+.hackathonCont {
+	position: relative;
+	width: 97%;
+	max-height: 15%;
+}
+
+.hackathonCont ul {
+	text-align: center;
+	width: 100%;
+}
+.hackathonCont ul li {
+	border: 2px solid #fff;
+	border-radius: 4px;
+	padding: 5px;
+	margin-left: 7%;
+	margin-right: 7%;
+	background-color: rgba(77, 77, 77, 0.7);
+	list-style-type: none;
+	display: inline-block;
+}
+
+.hackathonCont ul li:hover {
+	border: 2px solid #fff;
+	color: rgba(255, 255, 255, 0.85);
+	background-color: rgba(77, 77, 77, 0.4);;
+	cursor: pointer;
+}
+
+.categories {
+	width: 12%;
+	height: 95%;
+	border: 1px solid #fff;
+	padding: 1em;
+}
+
+.categories ul li {
+	list-style-type: none;
+	margin-bottom: 20px;
+}
+
+.categories ul li:hover {
+	border-bottom: 3px solid #fff;
+	margin-bottom: 17px;
+}
+
+.gallery {
+	width: 60%;
+	border: 1px solid #fff;
+	position: relative;
+	float: right;
+	margin-right: 4em;
+}
+
+.item {
+	width: 200px;
+	height: 200px;
+	background-color: rgba(255, 255, 255, 0.2);
+	margin: 2em;
+	float: right;
+	position: relative;
+}
+
+.item:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+	cursor: pointer;
+}
+
+.profile {
+	width: 15%;
+	border: 1px solid #fff;
+	position: relative;
+	float: right;
+}
