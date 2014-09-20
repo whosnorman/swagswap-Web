@@ -1,0 +1,26 @@
+{
+  "name": "swag-swap",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "mattohagan",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "express": "^4.6.1",
+    "request": "^2.39.0"
+  }
+}
