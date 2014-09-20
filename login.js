@@ -29,12 +29,13 @@
 
           //console.log(user);
           // Handle successful login
-          /*document.getElementById('welcome').innerHTML = "Let's Get Some";
+          
+          document.getElementById('welcome').innerHTML = "Let's Get Some";
           document.getElementById('first').innerHTML = "Swaggathon";
           document.getElementById('second').innerHTML = "Swagger";
 
 
-          window.location.replace("http://swagswap.me/main.html"); */
+          window.location.replace("http://swagswap.me/main.html"); 
         },
         error: function(user, error) {
           console.log(error);
