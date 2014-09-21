@@ -85,11 +85,10 @@ document.getElementById('createSubmit').addEventListener('click', function(){
 });
 
 document.getElementById('signinSubmit').addEventListener('click', function(){
-  var email = document.getElementById('frontsignin').children[0].value;
+  var username = document.getElementById('frontsignin').children[0].value;
   var pass = document.getElementById('frontsignin').children[1].value;
-  alert(email + ' ' + pass);
 
-  Parse.User.logIn(email, pass, {
+  Parse.User.logIn(username, pass, {
   success: function(user) {
     // Do stuff after successful login.
     classie.addClass(signinForm, 'fadeOut');
