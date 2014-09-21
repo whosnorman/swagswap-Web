@@ -8,15 +8,38 @@ var btnCreate = document.getElementById('signup');
 var signinForm = document.getElementById('frontsignin');
 var createForm = document.getElementById('frontcreateaccount');
 console.log(btnSignin);
+
 btnSignin.addEventListener('click', function(){
   classie.addClass(btnCont, 'fadeOut');
 
   setInterval(function(){ 
-    btnCont.style.display = 'none'; 
+    btnCont.style.display = 'none';
+    classie.removeClass(btnCont, 'fadeOut');
+    classie.addClass(signinForm, 'fadeIn');
+    signinForm.style.display = 'block';
+   
     setInterval(function(){
-      classie.addClass(signinForm, 'fadeIn');
-    });
-  }, 1000);
+      classie.removeClass(signinForm, 'fadeIn');
+      signinForm.style.opacity = 1;
+    }, 700);
+  }, 700);
+  
+});
+
+btnCreate.addEventListener('click', function(){
+  classie.addClass(btnCont, 'fadeOut');
+
+  setInterval(function(){ 
+    btnCont.style.display = 'none';
+    classie.removeClass(btnCont, 'fadeOut');
+    classie.addClass(createForm, 'fadeIn');
+    createForm.style.display = 'block';
+   
+    setInterval(function(){
+      classie.removeClass(createForm, 'fadeIn');
+      createForm.style.opacity = 1;
+    }, 700);
+  }, 700);
   
 });
 

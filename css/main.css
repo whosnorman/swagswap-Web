@@ -12,6 +12,8 @@ form {
 	font-weight: 300;
 	font-size: 2.2vw;
 	color: #fff;
+	opacity: 0;
+	display: none;
 }
 
 form input {
@@ -295,17 +297,17 @@ form input:focus {
 }
 
 .fadeIn {
-	-webkit-animation: fadeIn 1s infinite;
-	animation: fadeIn 1.5s infinite;
-	-o-animation: fadeIn 1.5s infinite;
-	-moz-animation: fadeIn 1.5s infinite;
+	-webkit-animation: fadeIn 0.7s infinite;
+	animation: fadeIn 0.7s infinite;
+	-o-animation: fadeIn 0.7s infinite;
+	-moz-animation: fadeIn 0.7s infinite;
 }
 
 .fadeOut {
-	-webkit-animation: fadeOut 1s infinite;
-	animation: fadeOut 1s infinite;
-	-o-animation: fadeOut 1s infinite;
-	-moz-animation: fadeOut 1s infinite;
+	-webkit-animation: fadeOut 0.7s infinite;
+	animation: fadeOut 0.7s infinite;
+	-o-animation: fadeOut 0.7s infinite;
+	-moz-animation: fadeOut 0.7s infinite;
 }
 
 
