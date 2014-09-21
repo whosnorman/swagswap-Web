@@ -21,22 +21,31 @@ if (currentUser) {
 }
 
 
-
-function createItem() {
-
-
+// create a new item under the current user
+function createItem(brand, image, cat, size) {
 
 	var Item = Parse.Object.extend("Item");
 	var newItem = new Item();
 
-	newItem.set("title", title);
-	newItem.set("cat", category);
-	newItem.set("user", name);
+	newItem.set("brand", brand);
+	newItem.set("category", cat);
+	newItem.set("owner", currentUser);
+	newItem.set("imageUrl", image);
 
-
+	newItem.save(null, {
+		success: function(newItem) {
+			// flash name green
+			alert(newitem.id + ' item created');
+		},
+		error: function(newItem, error) {
+			//flash name red
+			console.log("error: " + error.code + " " error.message);
+		}
+	})
 
 }
 
+// Add Item pop up box
 $('#plusBtn').click(function(e) {
     $('#addItem').lightbox_me({
         centered: true, 
@@ -54,7 +63,12 @@ $('#plusBtn').click(function(e) {
 	    var cat = form.children[2].value;
 	    var size = form.children[3].value;
 
-	    console.log(brand + ' ' + image + ' ' + size + ' ' + cat);
+	    form.children[0].children[0].value = '';
+	    form.children[1].children[0].value = '';
+
+	    //console.log(brand + ' ' + image + ' ' + size + ' ' + cat);
+		createItem(brand, image, cat, size);
+
 	});
     
 
