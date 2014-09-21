@@ -51,7 +51,7 @@ $('#plusBtn').click(function(e) {
     $('#addItem').lightbox_me({
         centered: true, 
         onLoad: function() { 
-            $('#addItem').find('input:first').focus()
+            $('#addItem').find('input:first').focus();
             }
         });
 
@@ -91,3 +91,6 @@ $('#plusBtn').click(function(e) {
 
 });
 
+function loadGallery() {
+	
+}
