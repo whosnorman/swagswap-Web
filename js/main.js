@@ -227,15 +227,18 @@ function addBtnListener(el){
 		        	
 			        $('#titleText').text(result.get('brand') + ' ' + cat);
 
-			        result.get('owner').fetch().then(function(fetchedUser){
+			        var owner = result.get('owner');
+
+			        owner.fetch().then(function(fetchedUser){
 					    name = fetchedUser.getUsername();
+					    document.getElementById('titleUser').innerHTML = name;
 					}, function(error){
 					    //Handle the error
 					    name = "";
 					});
 
-			        name = result.get('owner').getUsername();
-			        console.log(name);
+			        //name = result.get('owner').getUsername();
+			        //console.log(name);
 			        //document.getElementById('titleUser').innerHTML = name;
 
 			        if(cat == 'Shirt')
