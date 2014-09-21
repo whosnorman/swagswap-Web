@@ -174,6 +174,32 @@ body {
 	color: #C9645E;
 }
 
+.hack select {
+   background: transparent;
+   padding: 5px;
+   border: none;
+   border-bottom: 2px dashed #C9645E;
+    -webkit-appearance: none;
+   font-family: 'Muli', sans-serif;
+	font-weight: 700;
+	font-size: 1.5vw;
+	outline: none;
+	color: #C9645E;
+} 
+
+.hack select:hover {
+	cursor: pointer;
+}
+
+
+.styled{
+   width: 120px;
+   height: 34px;
+   overflow: hidden;
+   background: url(http://www.stackoverflow.com/favicon.ico) no-repeat 96% #ddd;
+}
+
+
 .topRight {
 	position: absolute;
 	margin-left: 55%;
@@ -205,11 +231,6 @@ body {
 .username {
 	font-weight: 900;
 	color: #C9645E;
-}
-
-.username:hover {
-	color:#C9645E;
-	cursor: pointer;
 }
 
 .one {

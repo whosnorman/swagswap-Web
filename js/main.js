@@ -22,24 +22,25 @@ if (currentUser) {
 
 
 // create a new item under the current user
-function createItem(brand, image, cat, size) {
+function createItem(brand, imageFile, cat, size) {
 
 	var Item = Parse.Object.extend("Item");
 	var newItem = new Item();
 
 	newItem.set("brand", brand);
+	newItem.set("size", size);
 	newItem.set("category", cat);
 	newItem.set("owner", currentUser);
-	newItem.set("imageUrl", image);
+	newItem.set("imageFile", imageFile);
 
 	newItem.save(null, {
 		success: function(newItem) {
 			// flash name green
-			alert(newitem.id + ' item created');
+			alert(newItem.id + ' item created');
 		},
 		error: function(newItem, error) {
 			//flash name red
-			console.log("error: " + error.code + " " error.message);
+			console.log("error: " + error.message);
 		}
 	})
 
@@ -53,21 +54,37 @@ $('#plusBtn').click(function(e) {
             $('#addItem').find('input:first').focus()
             }
         });
-    e.preventDefault();
 
     $('#confirm').click(function(e) {
     	var form = document.getElementById('itemForm');
 
+    	// get regular values
 	    var brand = form.children[0].children[0].value;
-	    var image = form.children[1].children[0].value;
 	    var cat = form.children[2].value;
 	    var size = form.children[3].value;
 
+	    // clean up
 	    form.children[0].children[0].value = '';
-	    form.children[1].children[0].value = '';
+
+	    // image handling
+	    var fileUploadControl = $('#photoUpload')[0];
+	    if (fileUploadControl.files.length > 0) {
+	    	var file = fileUploadControl.files[0];
+	    	var fileName = "photo.png";
+
+	    	var parseFile = new Parse.File(name, file);
+	    	parseFile.save().then(function() {
+			  // The file has been saved to Parse.
+			}, function(error) {
+			  // The file either could not be read, or could not be saved to Parse.
+				console.log("error: " + error.message);
+			});
+	    }
 
 	    //console.log(brand + ' ' + image + ' ' + size + ' ' + cat);
-		createItem(brand, image, cat, size);
+		createItem(brand, parseFile, cat, size);
+
+		$('#confirm').trigger('close');
 
 	});
     

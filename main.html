@@ -24,7 +24,13 @@
 		</div>
 
 		<div class="currentHack">
-			Current Hackathon: <span class="hack" id="hack">HackGT</span>
+			Current Hackathon: <span class="hack" id="hack">
+			<select>
+				<option>HackGT</option>
+				<option>Unhackathon</option>
+				<option>Hack The North</option>
+			</select>
+			</span>
 		</div>
 
 		<div class="brand">
@@ -169,7 +175,7 @@
                 <span style="margin-left: 200px;">Add Some Swag to the Swag Bag</span>
                 <div id="itemForm">
                     <label>Brand <input class="lightBoxInput"></label>
-                    <label>Image URL <input class="lightBoxInput"></label>
+                    <label>Image <input type="file" id="photoUpload"></label>
 					<select class="lightBoxSelect">
 						<option>Shirt</option>
 						<option>Sticker</option>
