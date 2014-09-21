@@ -5,6 +5,28 @@ body {
     color: #fff;
 }
 
+.topBar {
+    top: 1em;
+    position: absolute;
+    background-color: rgba(77, 77, 77, 0.95);
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    color: #fff;
+    height: 100px;
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+}
+
+.brand {
+    position: relative;
+    float: left;
+    margin-left: 1em;
+    margin-top: 0.8em;
+    font-size: 1.7vw
+}
+
 .clock {
 	position: relative;
     float: right;
@@ -38,6 +60,10 @@ body {
     margin-right: 33%;
 }
 
+.btnContainer {
+
+}
+
 .frontsignin {
     border: 2px solid #fff;
     border-radius: 4px;
@@ -50,7 +76,7 @@ body {
     font-size: 2.2vw;
     width: 16em;
     margin-left: 32%;
-    margin-top: 3.5em;
+    margin-top: 2em;
     margin-right: 32%;
 }
 
@@ -71,6 +97,41 @@ body {
 }
 
 .frontsignin span a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.frontcreateaccount {
+    border: 2px solid #fff;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: rgba(77, 77, 77, 0.7);
+    display: inline-block;
+    text-align: center;
+    font-size: 2.2vw;
+    width: 16em;
+    margin-left: 32%;
+    margin-top: 1em;
+    margin-right: 32%;
+}
+
+.frontcreateaccount:hover {
+    border: 2px solid #C9645E;
+    color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(77, 77, 77, 0.4);;
+    cursor: pointer;
+}
+
+.frontcreateaccount:link {
+    color: #fff;
+}
+
+.frontcreateaccount a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.frontcreateaccount span a:visited {
     color: #fff;
     text-decoration: none;
 }
@@ -96,7 +157,7 @@ body {
     font-size: 2.2vw;
     width: 18em;
     margin-left: 30%;
-    margin-top: 3.5em;
+    margin-top: 2em;
     margin-right: 30%;
 }
 
@@ -129,6 +190,12 @@ body {
 
 @media (orientation: portrait) {
     .frontsignin {
+        display: none;
+    }
+}
+
+@media (orientation: portrait) {
+    .frontcreateaccount {
         display: none;
     }
 }
