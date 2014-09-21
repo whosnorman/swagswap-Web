@@ -9,6 +9,7 @@
 
   	<script src="js/modernizr.custom.js"></script>
 	<script src="js/classie.js"></script>
+	<script src="js/jquery.lightbox_me.js"></script>
 
 	<link href='http://fonts.googleapis.com/css?family=Nobile:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
@@ -63,6 +64,7 @@
 	<div class="profile">
 		My Swag Bag
 
+		<div class="plusBtn" id="plusBtn">+</div>
 		<li class="line"></li>
 
 		<div class="itemSmall"></div>
@@ -159,6 +161,25 @@
 	</script>	
 
 	<script type="text/javascript" src="js/main.js"></script>
+
+	<div id="addItem" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; background-color: rgba(201,100,94,0.7); font-family:'Muli',sans-serif; font-size:3em; padding: 15px; border-radius: 7px; color: #fff;" >
+                <span>Add Some Swag</span>
+                <div id="sign_up_form">
+                    <label>Title <input class="lightBoxInput"></label>
+                    <label>Image <input class="lightBoxInput"></label>
+					<select class="lightBoxSelect">
+						<option>Shirt</option>
+						<option>Sticker</option>
+						<option>Headwear</option>
+						<option>Gadgets</option>
+						<option>Misc</option>
+					</select>
+                    <div id="actions">
+                        <a class="close lightBoxInput" id="cancel" href="#">Cancel</a>
+                        <a class="lightBoxInput" id="log_in" href="#">Sign in</a>
+                    </div>
+                </div>
+    </div>
 
 
 
