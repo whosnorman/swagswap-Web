@@ -1,7 +1,74 @@
 // Initialize Parse
-  Parse.initialize("fDtFG7b6I2GY7y6rYyNcW0kw9fcz7aUxm8lwdszI", "56XSOXSv9dPh0aDrSGDKVXwWcZ3mWQkyAZAmVMDP");
-  
-  window.fbAsyncInit = function() {
+Parse.initialize("fDtFG7b6I2GY7y6rYyNcW0kw9fcz7aUxm8lwdszI", "56XSOXSv9dPh0aDrSGDKVXwWcZ3mWQkyAZAmVMDP");
+
+
+
+function signup() {
+    var user = new Parse.User();
+    user.set("first_name", name);
+    user.set("password", pass);
+    user.set("email", email);
+    user.set("college", college);
+
+    user.signUp(null, {
+      success: function(user) {
+        alert("horray you have signed up!");
+      },
+      error: function(user, error) {
+        alert("error: " + error.code + ' ' + error.message);
+    }
+    });
+}
+
+function login() {
+  Parse.User.logIn(email, pass, {
+  success: function(user) {
+    // Do stuff after successful login.
+    setTimeout(function(){
+      window.location.replace("http://swagswap.me/main.html"); 
+    }, 1500);
+
+  document.getElementById('welcome').innerHTML = "Let's Get Some";
+  document.getElementById('first').innerHTML = "Swaggathon";
+  document.getElementById('second').innerHTML = "Swagger";
+
+  },
+  error: function(user, error) {
+    // The login failed. Check error to see why.
+    alert("error: " + error.code + ' ' + error.message);
+  }
+  });
+}
+
+
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*window.fbAsyncInit = function() {
 
     Parse.FacebookUtils.init({ // this line replaces FB.init({
       appId      : '742900129109809', // Facebook App ID
@@ -62,7 +129,7 @@
           Handle errors and cancellation
         }
       }); 
-    });*/
+    });
 
   });
 };
@@ -73,4 +140,4 @@
     js = d.createElement(s); js.id = id;
     js.src = "https://connect.facebook.net/en_US/all.js";
     fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
+  }(document, 'script', 'facebook-jssdk')); */

@@ -117,6 +117,17 @@ body {
 	cursor: pointer;
 }
 
+.hackathonCont ul li.line:hover {
+	background-color: #fff;
+	height: 0px;
+	width: 274px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding: 0;
+	border: 1px solid #C9645E;
+	cursor: default;
+}
+
 .categories {
 	width: 12%;
 	height: 10em;
@@ -176,6 +187,15 @@ body {
 	background-size: cover;
 	border: 4px solid #fff;
 	border-radius: 2px;
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	color: #fff;
+}
+
+.item figcaption h2,
+.item figcaption p {
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .item:hover {

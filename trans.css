@@ -17,17 +17,31 @@ figure {
 
 figure.zoe figcaption {
 	padding: 1em;
-	height: 1em;
-	background: #fff;
+	height: 20em;
+	opacity: 0;
+	background: rgba(255, 255, 255, 0.5);
 	color: #3c4a50;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,50%,0);
-	transform: translate3d(0,50%,0);
+	-webkit-transform: translate3d(0,-25%,0);
+	transform: translate3d(0,-25%,0);
+
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+
+}
+
+figure.zoe figcaption:hover {
+	/*height: 10em;*/
+
 }
 
 figure.zoe h2 {
 	float: left;
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
+	font-size: 1.5em;
+	color: #fff;
 }
 
 figure.zoe figcaption > span {
@@ -51,30 +65,10 @@ figure.zoe h2,
 figure.zoe figcaption > span {
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,200%,0);
-	transform: translate3d(0,200%,0);
+	-webkit-transform: translate3d(0,50%,0);
+	transform: translate3d(0,50%,0);
 }
 
-figure.zoe figcaption > span::before {
-	display: inline-block;
-	padding: 8px 10px;
-	font-family: 'feathericons';
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-eye::before {
-	content: '\e000';
-}
-
-.icon-paper-clip::before {
-	content: '\e001';
-}
-
-.icon-heart::before {
-	content: '\e024';
-}
 
 figure.zoe h2 {
 	display: inline-block;
@@ -89,6 +83,7 @@ figure.zoe:hover h2,
 figure.zoe:hover figcaption > span {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+	opacity: 1;
 }
 
 figure.zoe:hover h2 {
