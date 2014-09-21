@@ -7,7 +7,6 @@ var btnSignin = document.getElementById('login');
 var btnCreate = document.getElementById('signup');
 var signinForm = document.getElementById('frontsignin');
 var createForm = document.getElementById('frontcreateaccount');
-console.log(btnSignin);
 
 btnSignin.addEventListener('click', function(){
   classie.addClass(btnCont, 'fadeOut');
@@ -50,41 +49,72 @@ btnCreate.addEventListener('click', function(){
 
 });
 
-function signup() {
+
+document.getElementById('createSubmit').addEventListener('click', function(){
+
+  var form = document.getElementById('frontcreateaccount');
+  var name = form.children[0].value;
+  var college = form.children[1].value;
+  var email = form.children[2].value;
+  var pass = form.children[3].value;
+
+  console.log(name + ' ' + college + ' ' + email);
+
+
     var user = new Parse.User();
-    user.set("first_name", name);
+
+    user.set("username", name);
     user.set("password", pass);
     user.set("email", email);
     user.set("college", college);
 
     user.signUp(null, {
       success: function(user) {
-        alert("horray you have signed up!");
+        classie.addClass(createForm, 'fadeOut');
+        setInterval(function(){
+          classie.removeClass(createForm, 'fadeOut');
+          createForm.style.display = 'none';
+        }, 700);
+
+        welcome();
       },
       error: function(user, error) {
         alert("error: " + error.code + ' ' + error.message);
     }
     });
-}
+});
 
-function login() {
+document.getElementById('signinSubmit').addEventListener('click', function(){
+  var email = document.getElementById('frontsignin').children[0].value;
+  var pass = document.getElementById('frontsignin').children[1].value;
+  alert(email + ' ' + pass);
+
   Parse.User.logIn(email, pass, {
   success: function(user) {
     // Do stuff after successful login.
-    setTimeout(function(){
-      window.location.replace("http://swagswap.me/main.html"); 
-    }, 1500);
+    classie.addClass(signinForm, 'fadeOut');
+        setInterval(function(){
+          classie.removeClass(signinForm, 'fadeOut');
+          signinForm.style.display = 'none';
+        }, 700);
 
-  document.getElementById('welcome').innerHTML = "Let's Get Some";
-  document.getElementById('first').innerHTML = "Swaggathon";
-  document.getElementById('second').innerHTML = "Swagger";
-
+        welcome();
   },
   error: function(user, error) {
     // The login failed. Check error to see why.
     alert("error: " + error.code + ' ' + error.message);
   }
   });
+});
+
+function welcome() {
+  setTimeout(function(){
+      window.location.replace("http://swagswap.me/main.html"); 
+    }, 2000);
+
+  document.getElementById('welcome').innerHTML = "Let's Get Some";
+  document.getElementById('first').innerHTML = "Swaggathon";
+  document.getElementById('second').innerHTML = "Swagger";
 }
 
 

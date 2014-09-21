@@ -44,32 +44,34 @@
 
 	<div class="btnContainer" id="btnCont">
 		<div class="frontsignin" id="login">
-		      <span class="one"><a href="">Sign in</a></span>
+		      <span class="one">Sign in</span>
 		    </div>
 
 		<div class="frontcreateaccount" id="signup">
-		      <span class="one"><a href="">Create new account</a></span>
+		      <span class="one">Create new account</span>
 		    </div>
 	</div>
 
-	<form id="frontsignin">
-		Username: <input type="text" name"username"><br>
-		Password: <input type="password" name"password"><br>
-		<input type="submit" value="Submit"><br>
-	</form>
+	<div class="form" id="frontsignin">
+		Username(email): <input type="text" id"username">
+		Password: <input type="password" id"password">
+		<div class="button" id="signinSubmit">Submit</div>
+	</div>
 
-	<form id="frontcreateaccount">
-		First Name: <input type="text" name"firstnamecreate"><br>
-		College/University: <input type="text" name"collegeuniversitycreate"><br>
-		Username: <input type="text" name"usernamecreate"><br>
-		Password: <input type="password" name"usernamecreate"><br>
-		<input type="submit" value="Submit"><br>
-	</form>
+
+	<div class="form" id="frontcreateaccount">
+		First Name: <input type="text" id"firstname" />
+		College/University: <input type="text" id"college" />
+		Email(username): <input type="text" id"username" />
+		Password: <input type="password" id"password" />
+		<div class="button" id="createSubmit">Submit</div>
+	</div>
+	
 
 
 	<div class="frontsigninmobile">
-	      <span class="one">Mobile app coming soon</span>
-	    </div>
+	    <span class="one">Mobile app coming soon</span>
+	</div>
 
 	<script type="text/javascript">
 		tday  =new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
