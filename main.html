@@ -14,9 +14,8 @@
 </head>
 <body>
 	<div class="topBar">
-		
 
-		<div class="logOut"><div class="btn" id="logOutBtn"> Log Out </div></div>
+
 		<div class="topRight">
 			Hello, <span class="username" id="user">username</span>
 		</div>
@@ -24,6 +23,12 @@
 		<div class="brand">
 			<span class="one">Swag</span><span class="two">Swap</span>
 		</div>
+
+		<div class="clock">
+			<div id="clockbox"></div>
+		</div>
+
+	</div><!-- end top bar -->
 
 			<div class="pageCont">
 
@@ -45,7 +50,7 @@
 		</div>
 
 	</div> 
-	</div><!-- end top bar -->
+
 
 
 	<div class="profile">
@@ -53,6 +58,8 @@
 		<div class="itemSmall"></div>
 		<div class="itemSmall"></div>
 		<div class="itemSmall"></div>
+
+		<div class="logOut"><div class="btn" id="logOutBtn"> Log Out </div></div>
 	</div>
 
 	<div class="gallery">
@@ -117,10 +124,27 @@
 
 	</div>
 
+	<script type="text/javascript">
+		tday  =new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+		tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
 
-	
+		function GetClock(){
+		d = new Date();
+		nday   = d.getDay();
+		nmonth = d.getMonth();
+		ndate  = d.getDate();
+		nyear = d.getYear();
+		if(nyear<1000) nyear=nyear+1900;
+
+
+		document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
+		setTimeout("GetClock()", 1000);
+		}
+		window.onload=GetClock;
+	</script>	
 
 	<script type="text/javascript" src="main.js"></script>
+
 
 </body>
 </html>

@@ -23,23 +23,41 @@ body {
 
 .brand {
 	position: relative;
-	margin: 28px;
+	float: left;
+	margin-left: 1em;
+	margin-top: -1.2em;
 	font-size: 1.7vw
 }
 
+.clock {
+	position: relative;
+    float: right;
+    font-size: 1.5vw;
+    margin-top: -40px;
+    margin-right: 0.5em;
+}
 
 .logOut {
 	float: right;
 	position: realtive;
-	margin: 0.6em 0.8em 0.6em 0.8em;
+	margin-bottom: 0.5em;
+	width: 6em;
 	z-index: 2;
 }
 
 .topRight {
 	position: relative;
 	float: right;
-	margin: 0.8em;
+	margin-left: 45%;
+	margin-right: 45%;
+	margin-top: 30px;
+	width: 8em;
 	z-index: 2;
+}
+
+.username {
+	font-weight: 900;
+	color: #C9645E;
 }
 
 .username:hover {
@@ -70,13 +88,13 @@ body {
 
 .pageCont {
 	position: relative;
-	top: 0.6em;
+	top: 2em;
 	width: 97%;
 	height: 20px;
 	border: 0px solid #fff;
 	font-family: 'Muli', sans-serif;
 	font-weight: 700;
-	font-size: 36px;
+	font-size: 2vw;
 	color: #fff;
 }
 
@@ -135,7 +153,6 @@ body {
 	padding: 1em;
 	margin-left: 0.5em;
 	text-align: left;
-
 }
 
 .categories ul li {
@@ -155,7 +172,7 @@ body {
 	float: right;
 	margin-right: 4.5%;
 	margin-left: 4.5%;
-	margin-top: 13.5em;
+	margin-top: 2em;
 }
 
 .header {
@@ -213,7 +230,7 @@ body {
 	position: relative;
 	float: right;
 	margin-right: 0.5em;
-	top: 7em;
+	top: 2em;
 	text-align: center;
 	background-color: rgba(77, 77, 77, 1);
 	border: 3px solid #C9645E;
