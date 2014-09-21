@@ -108,7 +108,7 @@ document.getElementById('signinSubmit').addEventListener('click', function(){
 
 function welcome() {
   setTimeout(function(){
-      window.location.replace("http://swagswap.me/main.html"); 
+      window.location.replace("main.html"); 
     }, 2000);
 
   document.getElementById('welcome').innerHTML = "Let's Get Some";
