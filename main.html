@@ -161,11 +161,11 @@
 
 	<script type="text/javascript" src="js/main.js"></script>
 
-	<div id="addItem" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; background-color: rgba(201,100,94,0.7); font-family:'Muli',sans-serif; font-size:3em; padding: 15px; border-radius: 7px; color: #fff;" >
-                <span>Add Some Swag</span>
-                <div id="sign_up_form">
-                    <label>Title <input class="lightBoxInput"></label>
-                    <label>Image <input class="lightBoxInput"></label>
+	<div id="addItem" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; background-color: rgba(201,100,94,0.9); font-family:'Muli',sans-serif; font-size:3em; padding: 15px; border-radius: 7px; color: #fff;" >
+                <span style="margin-left: 200px;">Add Some Swag to the Swag Bag</span>
+                <div id="itemForm">
+                    <label>Brand <input class="lightBoxInput"></label>
+                    <label>Image URL <input class="lightBoxInput"></label>
 					<select class="lightBoxSelect">
 						<option>Shirt</option>
 						<option>Sticker</option>
@@ -173,12 +173,21 @@
 						<option>Gadgets</option>
 						<option>Misc</option>
 					</select>
+					<select class="lightBoxSelect">
+						<option>XS</option>
+						<option>S</option>
+						<option>M</option>
+						<option>L</option>
+						<option>XL</option>
+					</select>
                     <div id="actions">
-                        <a class="close lightBoxInput" id="cancel" href="#">Cancel</a>
-                        <a class="lightBoxInput" id="log_in" href="#">Sign in</a>
+                        <a class="close lightBoxBtn" id="cancel" href="#">Cancel</a>
+                        <a class="lightBoxBtn" id="confirm" href="#">Confirm</a>
                     </div>
                 </div>
     </div>
+
+    
 
 
 

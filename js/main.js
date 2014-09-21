@@ -45,5 +45,18 @@ $('#plusBtn').click(function(e) {
             }
         });
     e.preventDefault();
+
+    $('#confirm').click(function(e) {
+    	var form = document.getElementById('itemForm');
+
+	    var brand = form.children[0].children[0].value;
+	    var image = form.children[1].children[0].value;
+	    var cat = form.children[2].value;
+	    var size = form.children[3].value;
+
+	    console.log(brand + ' ' + image + ' ' + size + ' ' + cat);
+	});
+    
+
 });
 
