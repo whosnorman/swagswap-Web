@@ -2,6 +2,30 @@
 Parse.initialize("fDtFG7b6I2GY7y6rYyNcW0kw9fcz7aUxm8lwdszI", "56XSOXSv9dPh0aDrSGDKVXwWcZ3mWQkyAZAmVMDP");
 
 
+var btnCont = document.getElementById('btnCont');
+var btnSignin = document.getElementById('login');
+var btnCreate = document.getElementById('signup');
+var signinForm = document.getElementById('frontsignin');
+var createForm = document.getElementById('frontcreateaccount');
+console.log(btnSignin);
+btnSignin.addEventListener('click', function(){
+  classie.addClass(btnCont, 'fadeOut');
+
+  setInterval(function(){ 
+    btnCont.style.display = 'none'; 
+    setInterval(function(){
+      classie.addClass(signinForm, 'fadeIn');
+    });
+  }, 1000);
+  
+});
+
+btnCreate.addEventListener('click', function(){
+  classie.addClass(btnCont, 'fadeOut');
+  classie.addClass(createForm, 'fadeIn');
+
+
+});
 
 function signup() {
     var user = new Parse.User();
@@ -48,7 +72,7 @@ function login() {
 
 
 
-  }
+
 
 
 

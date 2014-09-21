@@ -7,6 +7,13 @@ body {
 	margin: 0;
 }
 
+form {
+   opacity: 1;
+   transition: opacity 3s ease-in-out;
+   -moz-transition: opacity 3s ease-in-out;
+   -webkit-transition: opacity 3s ease-in-out;
+}
+
 .topBar {
 	top: 1em;
 	position: absolute;
@@ -200,7 +207,7 @@ body {
 	margin: 0.65em 0.65em 1em 0.65em;
 	float: right;
 	position: relative;
-	background-image: url('hackfsuShirt.jpg');
+	background-image: url('../hackfsuShirt.jpg');
 	background-size: cover;
 	border: 4px solid #fff;
 	border-radius: 2px;
@@ -245,7 +252,7 @@ body {
 	margin: 0.65em 0.65em 1em 0.65em;
 	float: right;
 	position: relative;
-	background-image: url('hackfsuShirt.jpg');
+	background-image: url('../hackfsuShirt.jpg');
 	background-size: cover;
 	border: 4px solid #fff;
 	border-radius: 2px;
@@ -256,3 +263,56 @@ body {
 	opacity: 0.7;
 	cursor: pointer;
 }
+
+.fadeIn {
+	-webkit-animation: fadeIn 1s infinite;
+	animation: fadeIn 1.5s infinite;
+	-o-animation: fadeIn 1.5s infinite;
+	-moz-animation: fadeIn 1.5s infinite;
+}
+
+.fadeOut {
+	-webkit-animation: fadeOut 1s infinite;
+	animation: fadeOut 1s infinite;
+	-o-animation: fadeOut 1s infinite;
+	-moz-animation: fadeOut 1s infinite;
+}
+
+
+@-webkit-keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-o-keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+@-webkit-keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
