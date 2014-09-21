@@ -158,6 +158,21 @@ body {
 	font-size: 1.7vw;
 }
 
+.currentHack {
+	position: absolute;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 1em;
+	width: 700px;
+	font-size: 1.7vw;
+	font-weight: 300;
+	color: #fff;
+}
+
+.hack {
+	font-weight: 900;
+	color: #C9645E;
+}
 
 .topRight {
 	position: absolute;
@@ -166,12 +181,14 @@ body {
 	margin-top: 1em;
 	width: 275px;
 	font-size: 1.7vw;
+	font-weight: 300;
 }
 
 .clock {
 	position: relative;
     float: right;
     font-size: 1.5vw;
+    font-weight: 300;
     margin-top: 1em;
     margin-right: 0.5em;
 }
