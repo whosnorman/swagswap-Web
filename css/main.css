@@ -18,6 +18,17 @@ body {
 	border: 2px solid #fff;
 }
 
+.lightBoxText {
+	font-family: 'Muli', sans-serif;
+	font-size: 1em;
+	font-weight: 900;
+	color: #fff;
+	padding: 5px;
+	margin: 5px;
+	background-color: rgba(255, 255, 255, 0.1);
+	text-align: center;
+}
+
 .lightBoxBtn {
 	font-family: 'Muli', sans-serif;
 	font-size: 0.5em;

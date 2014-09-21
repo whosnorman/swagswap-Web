@@ -167,6 +167,7 @@ function loadToGallery(item) {
 
 	var fig = document.createElement('figure');
 	fig.className = "item";
+	fig.setAttribute('id', item.id);
 	if(photo) {
 		fig.style.backgroundImage = "url('" + photo.url() + "')";
 		fig.style.backgroundSize = 'cover';
@@ -182,10 +183,87 @@ function loadToGallery(item) {
 
 	cap.appendChild(h);
 	fig.appendChild(cap);
+
+	fig.addEventListener('click', function(){
+
+	});
 	//console.log(fig);
 
 	document.getElementById('gallery').appendChild(fig);
+
+	setTimeout(function(){
+		goThruGallery();
+	}, 1500);
 }
+
+function goThruGallery() {
+	var gal = document.getElementById('gallery');
+	var length = gal.children.length;
+
+	for(var i = 0; i < length; i++){
+		addBtnListener(gal.children[i]);
+	}
+}
+
+
+function addBtnListener(el){
+	el.addEventListener('click', function(){
+
+		var Item = Parse.Object.extend("Item");
+		var query = new Parse.Query(Item);
+
+		query.equalTo('objectId', el.id);
+		query.first({
+			success: function(result) {
+				console.log('success ' + result);
+
+			$('#openItem').lightbox_me({
+		        centered: true, 
+		        onLoad: function() { 
+		            $('#openItem').find('input:first').focus();
+
+		         	var cat = result.get('category');
+		         	var name;
+		        	
+			        $('#titleText').text(result.get('brand') + ' ' + cat);
+
+			        result.get('owner').fetch().then(function(fetchedUser){
+					    name = fetchedUser.getUsername();
+					}, function(error){
+					    //Handle the error
+					    name = "";
+					});
+
+			        name = result.get('owner').getUsername();
+			        console.log(name);
+			        //document.getElementById('titleUser').innerHTML = name;
+
+			        if(cat == 'Shirt')
+			        	document.getElementById('titleSize').innerHTML = result.get('size');
+			        else
+			        	document.getElementById('titleSize').style.display = 'none';
+
+			        document.getElementById('imgg').style.backgroundImage = "url('" + result.get('imageFile').url() + "')";
+			        document.getElementById('imgg').style.backgroundSize = 'cover';
+
+
+
+		        }
+	        });
+			
+
+			},
+			error: function(error) {
+				console.log("error: " + error.message);
+			}
+		});
+
+
+	});
+}
+
+
+
 
 function clearGallery() {
 	document.getElementById('gallery').innerHTML = '';
@@ -271,6 +349,6 @@ document.getElementById('logOutBtn').addEventListener('click', function(){
 
 queryAllItems();
 queryUserItems();
-cont.children[0].children[0].className = 'selected';
+document.getElementById('categories').children[0].children[0].className = 'selected';
 
 categories();
