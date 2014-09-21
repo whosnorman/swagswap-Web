@@ -32,13 +32,17 @@ body {
 	float: right;
 	position: realtive;
 	margin: 0.6em 0.8em 0.6em 0.8em;
+	margin-left: 40%;
+	margin-right: 40%;
 	z-index: 2;
 }
 
 .topRight {
 	position: relative;
 	float: right;
-	margin: 0.8em;
+	margin-left: 60%;
+	margin-right: 60%;
+	margin-top: 15px;
 	z-index: 2;
 }
 
@@ -76,7 +80,7 @@ body {
 	border: 0px solid #fff;
 	font-family: 'Muli', sans-serif;
 	font-weight: 700;
-	font-size: 36px;
+	font-size: 2vw;
 	color: #fff;
 }
 
