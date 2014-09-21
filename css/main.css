@@ -14,6 +14,9 @@ form {
 	color: #fff;
 	opacity: 0;
 	display: none;
+	margin-left: 32%;
+    margin-top: 2em;
+    margin-right: 32%;
 }
 
 form input {
@@ -79,7 +82,9 @@ form input:focus {
 .logOut {
 	float: right;
 	position: realtive;
-	margin-bottom: 0.5em;
+	margin-bottom: 15%;
+	margin-left: 15%;
+	margin-right: 15%;
 	width: 6em;
 	z-index: 2;
 }
