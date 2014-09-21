@@ -360,7 +360,7 @@ body {
 	margin-right: 1%;
 	float: right;
 	position: relative;
-	border: .125em solid #fff;
+	border: 2px solid #fff;
 	border-radius: .125em;
 	font-family: 'Muli', sans-serif;
 	font-weight: 300;
