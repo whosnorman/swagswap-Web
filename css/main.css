@@ -413,8 +413,8 @@ body {
 	float: right;
 	position: relative;
 	background-size: cover;
-	border: .1em solid #fff;
-	border-radius: .1em;
+	border: 2px solid #fff;
+	border-radius: 3px;
 	align: center;
 }
 
