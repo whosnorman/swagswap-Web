@@ -217,6 +217,7 @@ body {
 	margin-bottom: 1em;
 	margin-right: 1em;
 	width: 6em;
+	font-size: 0.5em;
 }
 
 .username {
@@ -306,6 +307,10 @@ body {
 	color: rgba(255, 255, 255, 0.85);
 	background-color: rgba(77, 77, 77, 0.4);;
 	cursor: pointer;
+}
+
+.selected {
+	border: 2px solid #C9645E !important;
 }
 
 .categories {

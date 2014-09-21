@@ -55,7 +55,7 @@ $('#plusBtn').click(function(e) {
             }
         });
     e.preventDefault();
-    
+
     $('#confirm').click(function(e) {
     	var form = document.getElementById('itemForm');
     	e.preventDefault();
@@ -97,6 +97,7 @@ $('#plusBtn').click(function(e) {
 function queryAllItems() {
 	var Item = Parse.Object.extend("Item");
 	var query = new Parse.Query(Item);
+	query.notEqualTo('owner', currentUser);
 
 	// straight here for all items
 	query.find({
@@ -125,6 +126,28 @@ function queryUserItems() {
 
 			for (var i = 0; i < results.length; i++) {
 				loadToBag(results[i]);
+				//console.log(results[i].get('brand'));
+			}
+		},
+		error: function(error) {
+			console.log("error: " + error.message);
+		}
+	});
+}
+
+// queries for different categories
+function queryItems(cat) {
+	var Item = Parse.Object.extend("Item");
+	var query = new Parse.Query(Item);
+
+	query.equalTo('category', cat);
+	query.notEqualTo('owner', currentUser);
+	query.find({
+		success: function(results) {
+			console.log('success ' + results.length);
+
+			for (var i = 0; i < results.length; i++) {
+				loadToGallery(results[i]);
 				//console.log(results[i].get('brand'));
 			}
 		},
@@ -164,8 +187,76 @@ function loadToGallery(item) {
 	document.getElementById('gallery').appendChild(fig);
 }
 
-function loadToBag(item) {
-
+function clearGallery() {
+	document.getElementById('gallery').innerHTML = '';
 }
 
-queryAllItems();
+function loadToBag(item) {
+	var div = document.createElement('div');
+	div.className = 'itemSmall';
+
+	div.style.backgroundImage = "url('" + item.get('imageFile').url() + "')";
+	div.style.backgroundSize = 'cover';
+
+	document.getElementById('bag').appendChild(div);
+}
+
+//queryAllItems();
+//queryUserItems();
+
+function categories() {
+	var cont = document.getElementById('categories');
+	var list = cont.children[0];
+
+	// all
+	list.children[0].addEventListener("click", function(){
+		queryAllItems();
+		resetCat();
+		list.children[0].className = 'selected';
+	});
+
+	// shirts
+	list.children[1].addEventListener("click", function(){
+		queryItems('Shirt');
+		resetCat();
+		list.children[1].className = 'selected';
+	});
+
+	// stickers
+	list.children[2].addEventListener("click", function(){
+		queryItems('Sticker');
+		resetCat();
+		list.children[2].className = 'selected';
+	});
+
+	// headwear
+	list.children[3].addEventListener("click", function(){
+		queryItems('Headwear');
+		resetCat();
+		list.children[3].className = 'selected';
+	});
+
+	// gadgets
+	list.children[4].addEventListener("click", function(){
+		queryItems('Gadgets');
+		resetCat();
+		list.children[4].className = 'selected';
+	});
+
+	// misc
+	list.children[5].addEventListener("click", function(){
+		queryItems('Misc');
+		resetCat();
+		list.children[5].className = 'selected';
+	});
+
+	function resetCat(){
+		for(var i = 0; i < 6; i++) {
+			cont.children[0].children[i].className = '';
+		}
+
+		clearGallery();
+	}
+}
+
+categories();
