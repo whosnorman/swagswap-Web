@@ -3,7 +3,6 @@
 /*---------------*/
 
 .item figcaption {
-	bottom: 0;
 	padding: 1em;
 	height: 1em;
 	background: #fff;
@@ -14,10 +13,13 @@
 
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
+
 	-webkit-transform: translate3d(0,100%,0);
 	transform: translate3d(0,100%,0);
+
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
 }
