@@ -85,9 +85,20 @@ body {
 }
 
 .hackathonCont {
-	position: relative;
+	font-size: 1em;
 	width: 50%;
-	max-height: 15%;
+	margin-top: 3em;
+	font-weight: 300;
+}
+
+.hackathonCont ul li.line {
+	background-color: #fff;
+	height: 0px;
+	width: 274px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding: 0;
+	border: 1px solid #C9645E;
 }
 
 .hackathonCont li {
@@ -131,21 +142,44 @@ body {
 }
 
 .gallery {
+	font-size: 1em;
 	width: 60%;
-	border: 1px solid #fff;
 	position: relative;
 	float: right;
 	margin-right: 4.5%;
 	margin-left: 4.5%;
+	margin-top: 13.5em;
+}
+
+.header {
+	font-family: 'Muli', sans-serif;
+	font-weight: 900;
+	font-size: 4em;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 20px;
+	padding-right: 50px;
+}
+
+.line {
+	width: 100%;
+	height: 3px;
+	border-radius: 4px;
+	background-color: #fff;
+	border-color: #fff;
 }
 
 .item {
-	width: 200px;
-	height: 200px;
-	background-color: rgba(255, 255, 255, 0.2);
-	margin: 0.45em 0.45em 0.45em 0.45em;
+	width: 29%;
+	height: 300px;
+	/*background-color: rgba(255, 255, 255, 0.2);*/
+	margin: 0.65em 0.65em 1em 0.65em;
 	float: right;
 	position: relative;
+	background-image: url('hackfsuShirt.jpg');
+	background-size: cover;
+	border: 4px solid #fff;
+	border-radius: 2px;
 }
 
 .item:hover {
@@ -154,11 +188,38 @@ body {
 }
 
 .profile {
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
+	font-size: 2em;
+	color: #fff;
 	width: 15%;
 	height: 20em;
-	border: 1px solid #fff;
 	position: relative;
 	float: right;
 	margin-right: 0.5em;
+	top: 7em;
 	text-align: center;
+	background-color: rgba(77, 77, 77, 1);
+	border: 3px solid #C9645E;
+	border-radius: 4px;
+	padding: 0.5em 0.7em 0.5em 0.5em;
+}
+
+.itemSmall {
+	width: 30%;
+	height: 70px;
+	/*background-color: rgba(255, 255, 255, 0.2);*/
+	margin: 0.65em 0.65em 1em 0.65em;
+	float: right;
+	position: relative;
+	background-image: url('hackfsuShirt.jpg');
+	background-size: cover;
+	border: 4px solid #fff;
+	border-radius: 2px;
+	align: center;
+}
+
+.itemSmall:hover {
+	opacity: 0.7;
+	cursor: pointer;
 }
