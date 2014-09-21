@@ -1,42 +1,42 @@
-/*---------------*/
-/***** Zoe *****/
-/*---------------*/
+figure {
+	width: 29%;
+	height: 300px;
+	/*background-color: rgba(255, 255, 255, 0.2);*/
+	margin: 0.65em 0.65em 1em 0.65em; 
+	float: right;
+	position: relative;
+	background-image: url('hackfsuShirt.jpg');
+	background-size: cover;
+	border: 4px solid #fff;
+	border-radius: 2px;
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	color: #fff;
+}
 
-.item figcaption {
+figure.zoe figcaption {
 	padding: 1em;
 	height: 1em;
 	background: #fff;
 	color: #3c4a50;
-	font-size: 1vw;
-	font-family: 'Muli', sans-serif;
-	opacity: 0;
-
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
-
-	-webkit-transform: translate3d(0,100%,0);
-	transform: translate3d(0,100%,0);
-
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-
-	-webkit-transition: opacity 0.35s;
-	transition: opacity 0.35s;
+	-webkit-transform: translate3d(0,50%,0);
+	transform: translate3d(0,50%,0);
 }
 
-.item h2 {
+figure.zoe h2 {
 	float: left;
-	font-weight: 300;
 }
 
-.item h2 span {
+figure.zoe figcaption > span {
 	float: right;
-	position: relative;
 	font-weight: 900;
 }
-.item p {
+
+figure.zoe p {
 	position: absolute;
-	padding: 2em;
 	color: #fff;
 	text-transform: none;
 	font-size: 90%;
@@ -47,15 +47,15 @@
 	transition: opacity 0.35s;
 }
 
-.item h2,
-.item figcaption > span {
+figure.zoe h2,
+figure.zoe figcaption > span {
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,200%,0);
 	transform: translate3d(0,200%,0);
 }
 
-.item figcaption > span::before {
+figure.zoe figcaption > span::before {
 	display: inline-block;
 	padding: 8px 10px;
 	font-family: 'feathericons';
@@ -76,42 +76,77 @@
 	content: '\e024';
 }
 
-.item h2 {
+figure.zoe h2 {
 	display: inline-block;
 }
 
-.item:hover p {
+figure.zoe:hover p {
 	opacity: 1;
 }
 
-item:hover figcaption {
+figure.zoe:hover figcaption,
+figure.zoe:hover h2,
+figure.zoe:hover figcaption > span {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.zoe:hover h2 {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.zoe:hover figcaption > span:nth-child(4) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.zoe:hover figcaption > span:nth-child(3) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.effect-zoe:hover figcaption > span:nth-child(2) {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+figure.zoe h2 {
+	display: inline-block;
+}
+
+figure.zoe:hover p {
 	opacity: 1;
 }
 
-.item:hover figcaption,
-.item:hover h2,
-.item:hover figcaption > span {
+figure.zoe:hover figcaption {
+	opacity: 1;
+}
+
+figure.zoe:hover figcaption,
+figure.zoe:hover h2,
+figure.zoe:hover figcaption > span {
 	-webkit-transform: translate3d(0,100%,0);
 	transform: translate3d(0,100%,0);
 	opacity: 1;
 }
 
-.item:hover h2 {
+figure.zoe:hover h2 {
 	-webkit-transition-delay: 0.05s;
 	transition-delay: 0.05s;
 }
 
-.item:hover figcaption > span:nth-child(4) {
+figure.zoe:hover figcaption > span:nth-child(4) {
 	-webkit-transition-delay: 0.1s;
 	transition-delay: 0.1s;
 }
 
-.item:hover figcaption > span:nth-child(3) {
+figure.zoe:hover figcaption > span:nth-child(3) {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
 
-.item:hover figcaption > span:nth-child(2) {
+figure.zoe:hover figcaption > span:nth-child(2) {
 	-webkit-transition-delay: 0.2s;
 	transition-delay: 0.2s;
 }
