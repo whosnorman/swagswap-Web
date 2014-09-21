@@ -313,6 +313,11 @@ body {
 	border: 2px solid #C9645E !important;
 }
 
+.swagTag:hover {
+	color: #C9645E;
+	cursor: pointer;
+}
+
 .categories {
 	width: 12%;
 	height: 2%;

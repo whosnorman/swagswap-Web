@@ -259,4 +259,18 @@ function categories() {
 	}
 }
 
+// swag bag header tag to reload user items
+document.getElementById('swagTag').addEventListener('click', function(){
+	queryUserItems();
+});
+
+//log out button
+document.getElementById('logOutBtn').addEventListener('click', function(){
+	window.location.replace('/index.html');
+});
+
+queryAllItems();
+queryUserItems();
+cont.children[0].children[0].className = 'selected';
+
 categories();
