@@ -54,10 +54,11 @@ $('#plusBtn').click(function(e) {
             $('#addItem').find('input:first').focus();
             }
         });
-
+    e.preventDefault();
+    
     $('#confirm').click(function(e) {
     	var form = document.getElementById('itemForm');
-
+    	e.preventDefault();
     	// get regular values
 	    var brand = form.children[0].children[0].value;
 	    var cat = form.children[2].value;
@@ -75,6 +76,7 @@ $('#plusBtn').click(function(e) {
 	    	var parseFile = new Parse.File(name, file);
 	    	parseFile.save().then(function() {
 			  // The file has been saved to Parse.
+			  console.log('saved image');
 			}, function(error) {
 			  // The file either could not be read, or could not be saved to Parse.
 				console.log("error: " + error.message);
@@ -82,6 +84,7 @@ $('#plusBtn').click(function(e) {
 	    }
 
 	    //console.log(brand + ' ' + image + ' ' + size + ' ' + cat);
+		console.log('creating item');
 		createItem(brand, parseFile, cat, size);
 
 		$('#confirm').trigger('close');
@@ -91,6 +94,78 @@ $('#plusBtn').click(function(e) {
 
 });
 
-function loadGallery() {
-	
+function queryAllItems() {
+	var Item = Parse.Object.extend("Item");
+	var query = new Parse.Query(Item);
+
+	// straight here for all items
+	query.find({
+		success: function(results) {
+			console.log('success ' + results.length);
+
+			for (var i = 0; i < results.length; i++) {
+				loadToGallery(results[i]);
+				//console.log(results[i].get('brand'));
+			}
+		},
+		error: function(error) {
+			console.log("error: " + error.message);
+		}
+	});
 }
+
+function queryUserItems() {
+	var Item = Parse.Object.extend("Item");
+	var query = new Parse.Query(Item);
+
+	query.equalTo('owner', currentUser);
+	query.find({
+		success: function(results) {
+			console.log('success ' + results.length);
+
+			for (var i = 0; i < results.length; i++) {
+				loadToBag(results[i]);
+				//console.log(results[i].get('brand'));
+			}
+		},
+		error: function(error) {
+			console.log("error: " + error.message);
+		}
+	});
+}
+
+
+// create full DOM element and append to gallery
+function loadToGallery(item) {
+	var cat = item.get('category');
+	var brand = item.get('brand');
+	var photo = item.get('imageFile');
+
+
+	var fig = document.createElement('figure');
+	fig.className = "item";
+	if(photo) {
+		fig.style.backgroundImage = "url('" + photo.url() + "')";
+		fig.style.backgroundSize = 'cover';
+	}
+
+	var cap = document.createElement('figcaption');
+	var h = document.createElement('h2');
+	var span = document.createElement('span');
+	span.innerHTML = cat;
+
+	h.innerHTML = brand + ' ';
+	h.appendChild(span);
+
+	cap.appendChild(h);
+	fig.appendChild(cap);
+	//console.log(fig);
+
+	document.getElementById('gallery').appendChild(fig);
+}
+
+function loadToBag(item) {
+
+}
+
+queryAllItems();
