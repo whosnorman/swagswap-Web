@@ -23,6 +23,15 @@ body {
     margin-right: 26%;
 }
 
+.swagswapTwo {
+    position: relative;
+    font-size: 6vw;
+    width: 8em;
+    margin-top: -0.2em;
+    margin-left: 22%;
+    margin-right: 26%;
+}
+
 .description {
 	position: relative;
     font-size: 1.5vw;
