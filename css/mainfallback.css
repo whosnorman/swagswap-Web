@@ -5,6 +5,20 @@ body {
     color: #fff;
 }
 
+.beta {
+    position: relative;
+    float: left;
+    width: 75px;
+    margin-left: 0.4em;
+    margin-top: 0.8em;
+    font-size: 1.7vw;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    padding: 0.25%;
+    color: #57FE51;
+    border-color: #57FE51;
+}
+
 .welcometo {
 	position: relative;
     font-size: 5vw;
@@ -37,10 +51,6 @@ body {
     font-size: 1.5vw;
     margin-left: 33%;
     margin-right: 33%;
-}
-
-.btnContainer {
-
 }
 
 .frontsignin {
